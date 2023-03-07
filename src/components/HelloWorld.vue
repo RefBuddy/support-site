@@ -8,14 +8,43 @@
             />
             <h1 class="header__title">Ref Buddy</h1>
         </header>
-        <div class="white-box"></div>
         <main class="main">
             <section class="introduction">
                 <h2 class="introduction__title">What is Ref Buddy?</h2>
                 <p class="introduction__description">
-                    Ref Buddy is a productivity app that helps you keep track of
-                    your tasks and projects.
+                    Ref Buddy is a mobile scheduling system used to assign
+                    on-ice officials to hockey games.
                 </p>
+                <p class="introduction__description">
+                    Each official gets their own profile where they can see
+                    their season stats, view and update availability, see
+                    upcoming games, and view previous games.
+                </p>
+                <p class="introduction__description">
+                    Ref Buddy allows for assignors to quickly and seemlessly add
+                    officials to games, as well as easily view their stats,
+                    previous games, and availability.
+                </p>
+            </section>
+            <section class="features">
+                <h2 class="features__title">Features</h2>
+                <ul class="features__list">
+                    <li>Schedule officiating for hockey leagues</li>
+                    <li>
+                        AI automatically collects and imports league schedule
+                    </li>
+                    <li>Individual official profiles</li>
+                    <li>AI generated stats for each official</li>
+                    <li>
+                        Quick access to all assigned games, along with their box
+                        scores
+                    </li>
+                    <li>
+                        When an official gets assigned a game, they receive a
+                        notification from Ref Buddy on their phone
+                    </li>
+                    <li>More to come!</li>
+                </ul>
             </section>
             <section class="screenshots">
                 <h2 class="screenshots__title">Screenshots</h2>
@@ -44,31 +73,13 @@
 body {
     font-family: "VT323", monospace;
     background-color: rgba(255, 145, 0, 0.73);
-    font-size: large;
-}
-
-.white-box {
-    position: sticky;
-    top: -50px;
-    left: 0;
-    right: 0;
-    height: 50px;
-    background-color: white;
-    z-index: 0;
-}
-
-.header__image {
-    width: 70px;
-    height: 70px;
-    margin-right: 16px;
-    float: left;
-    border-radius: 12px;
+    font-size: 20px;
 }
 
 .ref-buddy-page {
     width: auto;
     max-width: 550px;
-    height: 70%;
+    height: 80%;
     margin: 0 auto;
     padding: 40px;
     background-color: white;
@@ -79,11 +90,11 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     box-shadow: 15px 15px 0px 0px black;
-    overflow: scroll;
 }
 
 .header {
     height: 70px;
+    width: auto;
     background-color: white;
     border: 1px solid black;
     padding: 16px;
@@ -98,33 +109,99 @@ body {
     margin: 0 -16px 16px -16px;
 }
 
+.header__image {
+    width: 70px;
+    height: 70px;
+    margin-right: 16px;
+    float: left;
+    border-radius: 12px;
+}
+
 .header__title {
     margin: 0;
     padding-top: 15px;
+    margin-right: 15px;
 }
 
 .main {
     flex: 1;
     padding: 16px;
-    overflow: scroll;
+    width: auto;
+    max-width: 550px;
+    height: 80%;
+    overflow-y: scroll;
+    margin-left: 10px;
+}
+
+/* Hide the scrollbar */
+.main::-webkit-scrollbar {
+    display: none;
 }
 
 .introduction {
+    width: calc(100% - 7px);
     background-color: white;
     border: 1px solid black;
     padding: 16px;
     border-radius: 0;
-    text-align: center;
     box-shadow: 5px 5px 0px 0px black;
-    margin: -4px -16px 16px -16px;
-    z-index: 20;
+    margin: -4px -16px 26px -16px;
 }
 
 .introduction__title {
     color: black;
+    border: 1px solid orange;
+    width: auto;
+    max-width: 225px;
+    padding: 10px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.features {
+    width: calc(100% - 7px);
+    background-color: white;
+    border: 1px solid black;
+    padding: 16px;
+    border-radius: 0;
+    box-shadow: 5px 5px 0px 0px black;
+    margin: -4px -16px 26px -16px;
+}
+
+.features__title {
+    color: black;
+    border: 1px solid orange;
+    width: auto;
+    max-width: 125px;
+    padding: 10px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.features-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.features-list__item {
+    display: flex;
+    gap: 8px;
+}
+
+.features-list__icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.features-list__text {
+    font-weight: bold;
 }
 
 .screenshots {
+    width: calc(100% - 7px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -135,8 +212,7 @@ body {
     border-radius: 0;
     text-align: center;
     box-shadow: 5px 5px 0px 0px black;
-    z-index: 1;
-    margin: 0 -16px 16px -16px;
+    margin: 0 -16px 26px -16px;
 }
 
 .screenshots__title {
@@ -155,13 +231,13 @@ body {
 }
 
 .footer {
+    width: calc(100% - 7px);
     background-color: white;
     padding: 16px;
     border: 1px solid black;
     border-radius: 0;
     text-align: center;
     box-shadow: 5px 5px 0px 0px black;
-    z-index: 1;
     margin: 0 -16px 16px -16px;
 }
 
