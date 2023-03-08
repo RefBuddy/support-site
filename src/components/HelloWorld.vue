@@ -10,7 +10,6 @@
         </header>
         <main class="main">
             <section class="introduction">
-                <h2 class="introduction__title">What is Ref Buddy?</h2>
                 <p class="introduction__description">
                     Ref Buddy is a mobile scheduling system used to assign
                     on-ice officials to hockey games.
@@ -29,12 +28,10 @@
             <section class="features">
                 <h2 class="features__title">Features</h2>
                 <ul class="features__list">
-                    <li>Schedule officiating for hockey leagues</li>
-                    <li>
-                        AI automatically collects and imports league schedule
-                    </li>
+                    <li>Assign referees and linesmen to games</li>
+                    <li>Automatically imported league schedule</li>
                     <li>Individual official profiles</li>
-                    <li>AI generated stats for each official</li>
+                    <li>Stats for every official</li>
                     <li>Quick access to assigned games and box scores</li>
                     <li>
                         When an official gets assigned a game, they receive a
@@ -49,7 +46,6 @@
                 </ul>
             </section>
             <section class="screenshots">
-                <h2 class="screenshots__title">Screenshots</h2>
                 <div class="screenshots__container">
                     <button
                         class="screenshots__arrow screenshots__arrow--left"
@@ -191,7 +187,6 @@ body {
     margin-left: 10px;
 }
 
-/* Hide the scrollbar */
 .main::-webkit-scrollbar {
     display: none;
 }
@@ -204,16 +199,6 @@ body {
     border-radius: 0;
     box-shadow: 5px 5px 0px 0px black;
     margin: -4px -16px 26px -16px;
-}
-
-.introduction__title {
-    color: black;
-    border: 1px solid orange;
-    width: auto;
-    max-width: 225px;
-    padding: 10px;
-    margin: 0 auto;
-    text-align: center;
 }
 
 .features {
@@ -261,19 +246,23 @@ body {
 .screenshots {
     width: calc(100% - 7px);
     background-color: white;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     padding: 16px;
     border-radius: 0;
     text-align: center;
-    box-shadow: 5px 5px 0px 0px black;
+    /* box-shadow: 5px 5px 0px 0px black; */
     margin: 0 -16px 26px -16px;
     overflow-x: auto;
 }
 
 .screenshots__title {
     color: black;
+    border: 1px solid orange;
+    width: auto;
+    max-width: 225px;
+    padding: 10px;
+    margin: 0 auto;
     text-align: center;
-    margin-bottom: 16px;
 }
 
 .screenshots__items {
