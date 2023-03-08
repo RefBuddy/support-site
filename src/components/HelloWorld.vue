@@ -57,12 +57,17 @@
                         <img
                             class="screenshot__item"
                             src="@/assets/Stats.png"
-                            alt="Screenshot 1"
+                            alt="Stats"
                         />
                         <img
                             class="screenshot__item"
-                            src="@/assets/logo.png"
-                            alt="Screenshot 2"
+                            src="@/assets/Assignor.png"
+                            alt="Assignor"
+                        />
+                        <img
+                            class="screenshot__item"
+                            src="@/assets/Game.png"
+                            alt="Game"
                         />
                     </div>
                     <button
