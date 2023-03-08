@@ -125,15 +125,17 @@ body {
     width: auto;
     max-width: 550px;
     min-width: 300px;
-    height: 80%;
-    min-height: 300px;
+    height: 92%;
+    min-height: 450px;
     margin: 0 auto;
-    padding: 40px;
+    padding-top: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
     background-color: white;
     border-radius: 0;
     border: 3px solid black;
     position: absolute;
-    top: 50%;
+    top: calc(50% - 10px);
     left: 50%;
     transform: translate(-50%, -50%);
     box-shadow: 15px 15px 0px 0px black;
@@ -175,26 +177,32 @@ body {
     padding: 16px;
     width: auto;
     max-width: 550px;
-    height: 80%;
+    height: 78%;
     overflow-y: scroll;
     margin-left: 10px;
 }
 
-@media screen and (max-height: 690px) {
+@media screen and (max-height: 760px) {
+    .main {
+        height: 75%;
+    }
+}
+
+@media screen and (max-height: 660px) {
     .ref-buddy-page {
-        height: 70%;
+        height: 85%;
     }
     .main {
         height: 70%;
     }
 }
 
-@media screen and (max-height: 540px) {
+@media screen and (max-height: 595px) {
     .ref-buddy-page {
-        height: 60%;
+        height: 85%;
     }
     .main {
-        height: 60%;
+        height: 65%;
     }
 }
 
