@@ -22,8 +22,8 @@
                 </p>
                 <p class="introduction__description">
                     Ref Buddy allows for assignors to quickly and seemlessly add
-                    officials to games, as well as easily view their stats,
-                    previous games, and availability.
+                    officials to games, as well as view everything in their
+                    profile.
                 </p>
             </section>
             <section class="features">
@@ -35,23 +35,46 @@
                     </li>
                     <li>Individual official profiles</li>
                     <li>AI generated stats for each official</li>
-                    <li>
-                        Quick access to all assigned games, along with their box
-                        scores
-                    </li>
+                    <li>Quick access to assigned games and box scores</li>
                     <li>
                         When an official gets assigned a game, they receive a
                         notification from Ref Buddy on their phone
                     </li>
+                    <li>Send alerts and messages to officiating staff</li>
+                    <li>Game reminder system</li>
+                    <li>Incident reporting system</li>
+                    <li>Hockey Canada rulebook</li>
+                    <li>League rulebook</li>
                     <li>More to come!</li>
                 </ul>
             </section>
             <section class="screenshots">
                 <h2 class="screenshots__title">Screenshots</h2>
-                <div class="screenshots__items">
-                    <img src="screenshot-1.png" alt="Screenshot 1" />
-                    <img src="screenshot-2.png" alt="Screenshot 2" />
-                    <img src="screenshot-3.png" alt="Screenshot 3" />
+                <div class="screenshots__container">
+                    <button
+                        class="screenshots__arrow screenshots__arrow--left"
+                        @click="scrollLeft"
+                    >
+                        &#60;
+                    </button>
+                    <div class="screenshots__items" ref="screenshotsItems">
+                        <img
+                            class="screenshot__item"
+                            src="@/assets/Stats.png"
+                            alt="Screenshot 1"
+                        />
+                        <img
+                            class="screenshot__item"
+                            src="@/assets/logo.png"
+                            alt="Screenshot 2"
+                        />
+                    </div>
+                    <button
+                        class="screenshots__arrow screenshots__arrow--right"
+                        @click="scrollRight"
+                    >
+                        &#62;
+                    </button>
                 </div>
             </section>
             <footer class="footer">
@@ -66,6 +89,41 @@
         </main>
     </div>
 </template>
+
+<script>
+export default {
+    data() {
+        return {
+            currentIndex: 0,
+        };
+    },
+    mounted() {
+        this.screenshotItems = this.$refs.screenshotsItems.children;
+    },
+    methods: {
+        scrollLeft() {
+            if (this.currentIndex > 0) {
+                this.currentIndex--;
+                for (let i = 0; i < this.screenshotItems.length; i++) {
+                    this.screenshotItems[i].style.transform = `translateX(-${
+                        this.currentIndex * this.screenshotItems[i].offsetWidth
+                    }px)`;
+                }
+            }
+        },
+        scrollRight() {
+            if (this.currentIndex < this.screenshotItems.length - 1) {
+                this.currentIndex++;
+                for (let i = 0; i < this.screenshotItems.length; i++) {
+                    this.screenshotItems[i].style.transform = `translateX(-${
+                        this.currentIndex * this.screenshotItems[i].offsetWidth
+                    }px)`;
+                }
+            }
+        },
+    },
+};
+</script>
 
 <style>
 @import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
@@ -202,10 +260,6 @@ body {
 
 .screenshots {
     width: calc(100% - 7px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
     background-color: white;
     border: 1px solid black;
     padding: 16px;
@@ -213,6 +267,7 @@ body {
     text-align: center;
     box-shadow: 5px 5px 0px 0px black;
     margin: 0 -16px 26px -16px;
+    overflow-x: auto;
 }
 
 .screenshots__title {
@@ -223,11 +278,43 @@ body {
 
 .screenshots__items {
     display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
 }
 
 .screenshots__items > * {
-    width: 30%;
-    margin: 0 16px 16px 0;
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    margin-right: 16px;
+}
+
+.screenshots__items > :last-child {
+    margin-right: 0;
+}
+
+.screenshots__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 -16px;
+}
+
+.screenshots__arrow {
+    background-color: transparent;
+    border: none;
+    font-size: 32px;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+.screenshots__arrow--left {
+    margin-right: 16px;
+}
+
+.screenshots__arrow--right {
+    margin-left: 16px;
 }
 
 .footer {
