@@ -49,22 +49,25 @@
                 <div class="screenshots__container">
                     <button
                         class="screenshots__arrow screenshots__arrow--left"
-                        @click="scrollLeft"
+                        @click="prevImage"
                     >
                         &#60;
                     </button>
                     <div class="screenshots__items" ref="screenshotsItems">
                         <img
+                            v-if="currentImage === 0"
                             class="screenshot__item"
                             src="@/assets/Stats.png"
                             alt="Stats"
                         />
                         <img
+                            v-if="currentImage === 1"
                             class="screenshot__item"
                             src="@/assets/Assignor.png"
                             alt="Assignor"
                         />
                         <img
+                            v-if="currentImage === 2"
                             class="screenshot__item"
                             src="@/assets/Game.png"
                             alt="Game"
@@ -72,7 +75,7 @@
                     </div>
                     <button
                         class="screenshots__arrow screenshots__arrow--right"
-                        @click="scrollRight"
+                        @click="nextImage"
                     >
                         &#62;
                     </button>
@@ -95,32 +98,15 @@
 export default {
     data() {
         return {
-            currentIndex: 0,
+            currentImage: 0,
         };
     },
-    mounted() {
-        this.screenshotItems = this.$refs.screenshotsItems.children;
-    },
     methods: {
-        scrollLeft() {
-            if (this.currentIndex > 0) {
-                this.currentIndex--;
-                for (let i = 0; i < this.screenshotItems.length; i++) {
-                    this.screenshotItems[i].style.transform = `translateX(-${
-                        this.currentIndex * this.screenshotItems[i].offsetWidth
-                    }px)`;
-                }
-            }
+        nextImage() {
+            this.currentImage = (this.currentImage + 1) % 3;
         },
-        scrollRight() {
-            if (this.currentIndex < this.screenshotItems.length - 1) {
-                this.currentIndex++;
-                for (let i = 0; i < this.screenshotItems.length; i++) {
-                    this.screenshotItems[i].style.transform = `translateX(-${
-                        this.currentIndex * this.screenshotItems[i].offsetWidth
-                    }px)`;
-                }
-            }
+        prevImage() {
+            this.currentImage = (this.currentImage + 2) % 3;
         },
     },
 };
