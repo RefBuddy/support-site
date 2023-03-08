@@ -133,7 +133,9 @@ body {
 .ref-buddy-page {
     width: auto;
     max-width: 550px;
+    min-width: 300px;
     height: 80%;
+    min-height: 300px;
     margin: 0 auto;
     padding: 40px;
     background-color: white;
@@ -187,6 +189,24 @@ body {
     margin-left: 10px;
 }
 
+@media screen and (max-height: 690px) {
+    .ref-buddy-page {
+        height: 70%;
+    }
+    .main {
+        height: 70%;
+    }
+}
+
+@media screen and (max-height: 540px) {
+    .ref-buddy-page {
+        height: 60%;
+    }
+    .main {
+        height: 60%;
+    }
+}
+
 .main::-webkit-scrollbar {
     display: none;
 }
@@ -213,7 +233,6 @@ body {
 
 .features__title {
     color: black;
-    border: 1px solid orange;
     width: auto;
     max-width: 125px;
     padding: 10px;
@@ -246,11 +265,9 @@ body {
 .screenshots {
     width: calc(100% - 7px);
     background-color: white;
-    /* border: 1px solid black; */
     padding: 16px;
     border-radius: 0;
     text-align: center;
-    /* box-shadow: 5px 5px 0px 0px black; */
     margin: 0 -16px 26px -16px;
     overflow-x: auto;
 }
@@ -269,6 +286,9 @@ body {
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
+    border: 1px solid rgba(175, 175, 175, 0.236);
+    border-radius: 12px;
+    box-shadow: 10px 10px 0px 0px rgba(175, 175, 175, 0.236);
 }
 
 .screenshots__items > * {
