@@ -84,10 +84,17 @@
             <footer class="footer">
                 <h2 class="footer__title">Contact Us</h2>
                 <form class="footer__form">
-                    <input type="text" placeholder="Name" />
-                    <input type="email" placeholder="Email" />
-                    <textarea placeholder="Message"></textarea>
-                    <button type="submit">Submit</button>
+                    <input v-model="form.Name" type="text" placeholder="Name" />
+                    <input
+                        v-model="form.Email"
+                        type="email"
+                        placeholder="Email"
+                    />
+                    <textarea
+                        v-model="form.Message"
+                        placeholder="Message"
+                    ></textarea>
+                    <button @click.prevent="submitForm">Submit</button>
                 </form>
             </footer>
         </main>
@@ -95,13 +102,31 @@
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
     data() {
         return {
             currentImage: 0,
+            form: {
+                Name: "",
+                Email: "",
+                Message: "",
+            },
         };
     },
     methods: {
+        async submitForm() {
+            try {
+                await axios.post(
+                    "https://us-central1-ref-buddy-d7be3.cloudfunctions.net/sendContactForm",
+                    { data: this.form }
+                );
+            } catch (error) {
+                console.error(error);
+                alert("An error occurred while submitting the form.");
+            }
+        },
         nextImage() {
             this.currentImage = (this.currentImage + 1) % 3;
         },
