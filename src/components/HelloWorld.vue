@@ -81,9 +81,9 @@
                     </button>
                 </div>
             </section>
-            <footer class="footer">
-                <h2 class="footer__title">Contact Us</h2>
-                <form class="footer__form">
+            <footer ref="footer" class="footer">
+                <h2 ref="footerTitle" class="footer__title">Contact Us</h2>
+                <form ref="footerForm" class="footer__form">
                     <input v-model="form.Name" type="text" placeholder="Name" />
                     <input
                         v-model="form.Email"
@@ -97,6 +97,10 @@
                     <button @click.prevent="submitForm">Submit</button>
                 </form>
             </footer>
+            <div v-if="success" class="footer__success">
+                We have received your message and will get back to you as soon
+                as possible!
+            </div>
         </main>
     </div>
 </template>
@@ -113,6 +117,7 @@ export default {
                 Email: "",
                 Message: "",
             },
+            success: false,
         };
     },
     methods: {
@@ -122,6 +127,10 @@ export default {
                     "https://us-central1-ref-buddy-d7be3.cloudfunctions.net/sendContactForm",
                     { data: this.form }
                 );
+                this.success = true;
+                this.$refs.footerForm.style.display = "none";
+                this.$refs.footerTitle.style.display = "none";
+                this.$refs.footer.style.display = "none";
             } catch (error) {
                 console.error(error);
                 alert("An error occurred while submitting the form.");
@@ -352,6 +361,7 @@ body {
 
 .footer {
     width: calc(100% - 7px);
+    min-height: 245px;
     background-color: white;
     padding: 16px;
     border: 1px solid black;
@@ -361,7 +371,20 @@ body {
     margin: 0 -16px 16px -16px;
 }
 
+.footer__success {
+    max-height: 70px;
+    width: 80%;
+    display: flex;
+    padding: 16px;
+    font-size: 20px;
+    background-color: white;
+    border: 1px solid black;
+    box-shadow: 5px 5px 0px 0px black;
+    margin: 0 auto;
+}
+
 .footer__title {
+    display: block;
     color: black;
     margin-bottom: 16px;
 }
