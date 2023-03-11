@@ -82,7 +82,11 @@
                 </div>
             </section>
             <footer ref="footer" class="footer">
-                <h2 ref="footerTitle" class="footer__title">Contact Us</h2>
+                <p>
+                    Are you interested in having your league use Ref Buddy for
+                    assigning games? Feel free to reach out with any questions
+                    and we will get back to you in a timely manner.
+                </p>
                 <form ref="footerForm" class="footer__form">
                     <input v-model="form.Name" type="text" placeholder="Name" />
                     <input
@@ -129,7 +133,6 @@ export default {
                 );
                 this.success = true;
                 this.$refs.footerForm.style.display = "none";
-                this.$refs.footerTitle.style.display = "none";
                 this.$refs.footer.style.display = "none";
             } catch (error) {
                 console.error(error);
@@ -383,16 +386,11 @@ body {
     margin: 0 auto;
 }
 
-.footer__title {
-    display: block;
-    color: black;
-    margin-bottom: 16px;
-}
-
 .footer__form {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 32px;
 }
 
 .footer__form > * {
