@@ -194,7 +194,6 @@ body {
 .header {
     height: 70px;
     width: auto;
-    /* min-width: 260px; */
     background-color: white;
     border: 1px solid black;
     padding: 16px;
@@ -227,11 +226,11 @@ body {
     flex: 1;
     padding: 16px;
     width: auto;
-    /* min-width: 230px; */
     max-width: 550px;
     height: 78%;
     overflow-y: scroll;
     margin-left: 10px;
+    margin-right: 15px;
 }
 
 @media screen and (max-height: 760px) {
