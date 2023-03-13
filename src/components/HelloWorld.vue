@@ -272,9 +272,9 @@ body {
         height: 80%;
         margin-top: -15px;
     }
-    .header {
+    /* .header {
         margin: -20px 0 20px 0;
-    }
+    } */
 }
 
 .main::-webkit-scrollbar {
