@@ -260,7 +260,8 @@ body {
         box-shadow: none;
     }
     .main {
-        height: 75%;
+        height: 80%;
+        margin-top: -20px;
     }
 }
 
