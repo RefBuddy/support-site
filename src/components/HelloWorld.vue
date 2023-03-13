@@ -260,7 +260,7 @@ body {
         box-shadow: none;
     }
     .main {
-        height: 80%;
+        height: 75%;
     }
 }
 
