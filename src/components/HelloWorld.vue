@@ -260,6 +260,13 @@ body {
         background-color: transparent;
         border: none;
         box-shadow: none;
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        transform: none;
     }
     .main {
         height: 80%;
