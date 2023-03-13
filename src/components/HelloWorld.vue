@@ -260,7 +260,7 @@ body {
         background-color: transparent;
         border: none;
         box-shadow: none;
-        padding: 0;
+        padding: 10px;
         margin: 0;
         height: 100%;
         width: 100%;
