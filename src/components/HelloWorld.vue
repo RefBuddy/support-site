@@ -194,7 +194,7 @@ body {
 .header {
     height: 70px;
     width: auto;
-    min-width: 320px;
+    min-width: 290px;
     background-color: white;
     border: 1px solid black;
     padding: 16px;
@@ -227,7 +227,7 @@ body {
     flex: 1;
     padding: 16px;
     width: auto;
-    min-width: 290px;
+    min-width: 260px;
     max-width: 550px;
     height: 78%;
     overflow-y: scroll;
