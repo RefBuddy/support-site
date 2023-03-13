@@ -226,6 +226,7 @@ body {
     flex: 1;
     padding: 16px;
     width: auto;
+    min-width: 300px;
     max-width: 550px;
     height: 78%;
     overflow-y: scroll;
