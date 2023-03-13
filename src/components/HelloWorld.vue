@@ -253,9 +253,6 @@ body {
 }
 
 @media screen and (max-width: 480px) {
-    body {
-        zoom: 0.8;
-    }
     .ref-buddy-page {
         background-color: transparent;
         border: none;
