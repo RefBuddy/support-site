@@ -168,6 +168,11 @@ export default {
 };
 </script>
 
+<head>
+  <title>Ref Buddy</title>
+  <meta property="og:image" content="@/assets/Ref_Buddy.jpg">
+</head>
+
 <style>
 @import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
 
