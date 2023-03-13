@@ -11,25 +11,38 @@
         <main class="main">
             <section class="introduction">
                 <p class="introduction__description">
-                    Ref Buddy is a mobile scheduling system used to assign
-                    on-ice officials to hockey games.
+                    Ref Buddy is a revolutionary mobile scheduling solution
+                    designed specifically for hockey officials and assignors.
+                    With its intuitive interface and powerful features, Ref
+                    Buddy makes it easy for assignors to schedule the right
+                    officials for each game and for officials to manage their
+                    schedules and stay informed about their assignments.
                 </p>
                 <p class="introduction__description">
-                    Each official gets their own profile where they can see
-                    their season stats, view and update availability, see
-                    upcoming games, and view previous games.
+                    Each official has a personal profile where they can access
+                    season stats, as well as view and update their availability.
+                    Officials can also see their upcoming games and review
+                    previous games. All games have their box scores linked,
+                    making it easier for officials to prepare and stay
+                    organized.
                 </p>
                 <p class="introduction__description">
-                    Ref Buddy allows for assignors to quickly and seemlessly add
-                    officials to games, as well as view everything in their
-                    profile.
+                    With Ref Buddy, assignors have access to all the information
+                    they need in one convenient place, including official
+                    profiles, league schedule, and real-time availability
+                    updates.
+                </p>
+                <p class="introduction__description">
+                    Streamline your hockey official scheduling with Ref Buddy,
+                    the ultimate mobile scheduling solution for elite hockey
+                    leagues.
                 </p>
             </section>
             <section class="features">
                 <h2 class="features__title">Features</h2>
                 <ul class="features__list">
-                    <li>Assign referees and linesmen to games</li>
                     <li>Automatically imported league schedule</li>
+                    <li>Assign referees and linesmen to games</li>
                     <li>Individual official profiles</li>
                     <li>Stats for every official</li>
                     <li>Quick access to assigned games and box scores</li>
@@ -83,9 +96,9 @@
             </section>
             <footer ref="footer" class="footer">
                 <p>
-                    Are you interested in having your league use Ref Buddy for
-                    assigning games? Feel free to reach out with any questions
-                    and we will get back to you in a timely manner.
+                    Is your league interested in using Ref Buddy to assign games
+                    and track stats? Feel free to reach out with any questions
+                    and we will get back to you right away!
                 </p>
                 <form ref="footerForm" class="footer__form">
                     <input v-model="form.Name" type="text" placeholder="Name" />
@@ -236,7 +249,9 @@ body {
 
 @media screen and (max-height: 595px) {
     .ref-buddy-page {
-        height: 85%;
+        background-color: transparent;
+        border: none;
+        box-shadow: none;
     }
     .main {
         height: 65%;
@@ -300,7 +315,6 @@ body {
 
 .screenshots {
     width: calc(100% - 7px);
-    background-color: white;
     padding: 16px;
     border-radius: 0;
     text-align: center;
@@ -324,7 +338,7 @@ body {
     overflow-x: auto;
     border: 1px solid rgba(175, 175, 175, 0.236);
     border-radius: 12px;
-    box-shadow: 10px 10px 0px 0px rgba(175, 175, 175, 0.236);
+    box-shadow: 5px 5px 5px 0px rgba(175, 175, 175, 0.236);
 }
 
 .screenshots__items > * {
@@ -390,7 +404,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 32px;
+    padding-top: 16px;
 }
 
 .footer__form > * {
