@@ -258,6 +258,8 @@ body {
         background-color: transparent;
         border: none;
         box-shadow: none;
+        padding-left: 20px;
+        padding-right: 20px;
     }
     .main {
         height: 80%;
