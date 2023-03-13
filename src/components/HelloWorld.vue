@@ -194,6 +194,7 @@ body {
 .header {
     height: 70px;
     width: auto;
+    min-width: 320px;
     background-color: white;
     border: 1px solid black;
     padding: 16px;
@@ -262,7 +263,7 @@ body {
     }
     .main {
         height: 80%;
-        margin-top: -25px;
+        margin-top: -15px;
     }
     .header {
         margin: -15px 0 20px 0;
