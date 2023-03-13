@@ -273,7 +273,7 @@ body {
         margin-top: -15px;
     }
     .header {
-        margin: 0 20px 0 20px;
+        margin: 0 15px 15px 10px;
     }
 }
 
