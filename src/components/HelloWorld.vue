@@ -248,6 +248,12 @@ body {
 }
 
 @media screen and (max-height: 595px) {
+    .main {
+        height: 65%;
+    }
+}
+
+@media screen and (max-width: 480px) {
     .ref-buddy-page {
         background-color: transparent;
         border: none;
