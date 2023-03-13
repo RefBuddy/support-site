@@ -169,6 +169,7 @@ body {
     font-family: "VT323", monospace;
     background-color: rgba(255, 145, 0, 0.73);
     font-size: 20px;
+    zoom: 1;
 }
 
 .ref-buddy-page {
@@ -178,9 +179,7 @@ body {
     height: 92%;
     min-height: 450px;
     margin: 0 auto;
-    padding-top: 20px;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding: 20px 50px 0 50px;
     background-color: white;
     border-radius: 0;
     border: 3px solid black;
