@@ -261,10 +261,10 @@ body {
     }
     .main {
         height: 80%;
-        margin-top: -15px;
+        margin-top: -20px;
     }
     .header {
-        margin: -20px -8px 0 -8px;
+        margin: -15px -24px 20px -24px;
     }
 }
 
