@@ -258,15 +258,13 @@ body {
         background-color: transparent;
         border: none;
         box-shadow: none;
-        padding-left: 20px;
-        padding-right: 20px;
     }
     .main {
         height: 80%;
-        margin-top: -20px;
+        margin-top: -15px;
     }
     .header {
-        margin-top: -20px;
+        margin: -20px -8px 0 -8px;
     }
 }
 
