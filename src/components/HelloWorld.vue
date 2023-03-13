@@ -265,7 +265,7 @@ body {
         margin-top: -25px;
     }
     .header {
-        margin: -15px -24px 20px -24px;
+        margin: -15px 0 20px 0;
     }
 }
 
