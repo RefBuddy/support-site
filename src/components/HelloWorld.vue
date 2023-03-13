@@ -107,6 +107,11 @@
                         type="email"
                         placeholder="Email"
                     />
+                    <input
+                        v-model="form.League"
+                        type="text"
+                        placeholder="League"
+                    />
                     <textarea
                         v-model="form.Message"
                         placeholder="Message"
@@ -132,6 +137,7 @@ export default {
             form: {
                 Name: "",
                 Email: "",
+                League: "",
                 Message: "",
             },
             success: false,
@@ -336,6 +342,8 @@ body {
     text-align: center;
     margin: 0 -16px 26px -16px;
     overflow-x: auto;
+    margin-left: -16px;
+    margin-right: -16px;
 }
 
 .screenshots__title {
@@ -382,6 +390,7 @@ body {
     font-size: 32px;
     padding: 8px 16px;
     cursor: pointer;
+    color: black;
 }
 
 .screenshots__arrow--left {
