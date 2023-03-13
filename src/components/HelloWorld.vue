@@ -169,7 +169,6 @@ body {
     font-family: "VT323", monospace;
     background-color: rgba(255, 145, 0, 0.73);
     font-size: 20px;
-    zoom: 1;
 }
 
 .ref-buddy-page {
@@ -254,6 +253,9 @@ body {
 }
 
 @media screen and (max-width: 480px) {
+    body {
+        zoom: 0.9;
+    }
     .ref-buddy-page {
         background-color: transparent;
         border: none;
