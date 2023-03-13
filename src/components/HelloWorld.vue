@@ -227,7 +227,7 @@ body {
     flex: 1;
     padding: 16px;
     width: auto;
-    min-width: 300px;
+    min-width: 290px;
     max-width: 550px;
     height: 78%;
     overflow-y: scroll;
@@ -266,7 +266,7 @@ body {
         margin-top: -15px;
     }
     .header {
-        margin: -15px 0 20px 0;
+        margin: -20px 0 20px 0;
     }
 }
 
