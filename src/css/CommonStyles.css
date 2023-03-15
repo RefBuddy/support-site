@@ -1,13 +1,13 @@
 @import "./Features.css";
-@import "./Footer.css";
+@import "./ContactForm.css";
 @import "./Header.css";
 @import "./Introduction.css";
 @import "./Screenshots.css";
 
-@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
 body {
-    font-family: "VT323", monospace;
+    font-family: "Montserrat", sans-serif;
     background-color: rgba(255, 145, 0, 0.73);
     font-size: 20px;
 }

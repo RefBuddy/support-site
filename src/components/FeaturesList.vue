@@ -8,8 +8,8 @@
             <li>Stats for every official</li>
             <li>Quick access to assigned games and box scores</li>
             <li>
-                When an official gets assigned a game, they receive a
-                notification from Ref Buddy on their phone
+                Recieve notifications for new assignments and schedule updates
+                directly from Ref Buddy
             </li>
             <li>Send alerts and messages to officiating staff</li>
             <li>Game reminder system</li>
