@@ -6,6 +6,7 @@
             <Features />
             <Screenshots />
             <ContactForm />
+            <RefBuddyFooter />
         </main>
     </div>
 </template>
@@ -16,6 +17,7 @@ import Introduction from "./components/RefBuddyIntro.vue";
 import Features from "./components/FeaturesList.vue";
 import Screenshots from "./components/RefBuddyScreenshots.vue";
 import ContactForm from "./components/ContactForm.vue";
+import RefBuddyFooter from "./components/RefBuddyFooter.vue";
 
 export default {
     components: {
@@ -24,6 +26,7 @@ export default {
         Features,
         Screenshots,
         ContactForm,
+        RefBuddyFooter,
     },
 };
 </script>

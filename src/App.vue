@@ -1,15 +1,10 @@
 <template>
-    <SupportSite />
+    <router-view />
 </template>
 
 <script>
-import SupportSite from "./HomePage.vue";
-
 export default {
     name: "App",
-    components: {
-        SupportSite,
-    },
 };
 </script>
 
