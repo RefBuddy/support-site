@@ -111,7 +111,7 @@
                 contact us at jonah@refbuddy.ca.
             </p>
 
-            <p>Last updated: April 5, 2023.</p>
+            <p class="last-updated">Last updated: April 5, 2023.</p>
         </main>
     </section>
 </template>
@@ -142,7 +142,7 @@ export default {
 }
 
 /* last updated make font size small */
-p:last-child {
+.last-updated {
     padding-top: 20px;
     font-size: 0.7em;
 }
