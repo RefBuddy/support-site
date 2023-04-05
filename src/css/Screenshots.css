@@ -9,16 +9,6 @@
     margin-right: -16px;
 }
 
-.screenshots__title {
-    color: black;
-    border: 1px solid orange;
-    width: auto;
-    max-width: 225px;
-    padding: 10px;
-    margin: 0 auto;
-    text-align: center;
-}
-
 .screenshots__items {
     display: flex;
     flex-wrap: nowrap;
