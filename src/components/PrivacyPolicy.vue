@@ -16,20 +16,20 @@
                 information:
             </p>
 
-            <p>
+            <p class="list-item">
                 a. Personal Identifiable Information (PII): We may collect your
                 name, email address, phone number, and other information that
                 can be used to identify you.
             </p>
 
-            <p>
+            <p class="list-item">
                 b. Non-Personal Identifiable Information (Non-PII): We may
                 collect anonymous usage data, such as device type, operating
                 system, and other technical information that does not directly
                 identify you.
             </p>
 
-            <p>
+            <p class="list-item">
                 c. Location Data: We may collect your device's location data if
                 you grant us permission to do so.
             </p>
@@ -37,23 +37,23 @@
             <h3>2. How We Use Your Information</h3>
             <p>We use your personal information for the following purposes:</p>
 
-            <p>
+            <p class="list-item">
                 a. To provide and maintain the App, including ensuring it
                 functions properly and improving its features.
             </p>
 
-            <p>
+            <p class="list-item">
                 b. To communicate with you about your use of the App, including
                 responding to your inquiries, sending important notices, and
                 marketing our products and services.
             </p>
 
-            <p>
+            <p class="list-item">
                 c. To analyze usage patterns and improve the App's performance,
                 features, and overall user experience.
             </p>
 
-            <p>
+            <p class="list-item">
                 d. To detect, prevent, and address technical issues and security
                 breaches.
             </p>
@@ -64,17 +64,17 @@
                 third parties except:
             </p>
 
-            <p>
+            <p class="list-item">
                 a. When required by law, such as to comply with a subpoena,
                 court order, or government request.
             </p>
 
-            <p>
+            <p class="list-item">
                 b. To protect our rights, property, or safety, or the rights,
                 property, or safety of our users or the public.
             </p>
 
-            <p>
+            <p class="list-item">
                 c. With your consent, such as when you opt-in to receive
                 marketing materials or participate in a promotion.
             </p>
@@ -111,7 +111,7 @@
                 contact us at jonah@refbuddy.ca.
             </p>
 
-            <p>This Privacy Policy was last updated on April 5, 2023.</p>
+            <p>Last updated: April 5, 2023.</p>
         </main>
     </section>
 </template>
@@ -134,9 +134,21 @@ export default {
     overflow-y: scroll;
     margin-left: 10px;
     margin-right: 15px;
+    font-size: medium;
 }
 /* no scroll bar */
 ::-webkit-scrollbar {
     display: none;
+}
+
+/* last updated make font size small */
+p:last-child {
+    padding-top: 20px;
+    font-size: 0.7em;
+}
+
+p.list-item {
+    margin-left: 1.1em;
+    text-indent: -1.1em;
 }
 </style>
