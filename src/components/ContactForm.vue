@@ -54,45 +54,45 @@ export default {
   },
   methods: {
     async submitForm() {
-      // Clear any existing error messages
-      this.errors = {};
+        // Clear any existing error messages
+        this.errors = {};
 
-      // Check that all fields have a value
-      if (!this.form.Name) {
-        this.errors.Name = "Please enter your name.";
-      }
-      if (!this.form.Email) {
-        this.errors.Email = "Please enter your email address.";
-      }
-      if (!this.form.League) {
-        this.errors.League = "Please enter your league's name.";
-      }
-      if (!this.form.Message) {
-        this.errors.Message = "Please enter a message.";
-      }
-      if (Object.keys(this.errors).length > 0) {
-        return;
-      }
+        // Check that all fields have a value
+        if (!this.form.Name) {
+            this.errors.Name = "Please enter your name.";
+        }
+        if (!this.form.Email) {
+            this.errors.Email = "Please enter your email address.";
+        }
+        if (!this.form.League) {
+            this.errors.League = "Please enter your league's name.";
+        }
+        if (!this.form.Message) {
+            this.errors.Message = "Please enter a message.";
+        }
+        if (Object.keys(this.errors).length > 0) {
+            return;
+        }
 
-      // Check that the email field has a valid email address
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailRegex.test(this.form.Email)) {
-        this.errors.Email = "Please enter a valid email address.";
-        return;
-      }
+        // Check that the email field has a valid email address
+        const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        if (!emailRegex.test(this.form.Email)) {
+            this.errors.Email = "Please enter a valid email address.";
+            return;
+        }
 
-      try {
-        await axios.post(
-          "https://us-central1-ref-buddy-d7be3.cloudfunctions.net/sendContactForm",
-          { data: this.form }
-        );
-        this.success = true;
-        this.$refs.footerForm.style.display = "none";
-        this.$refs.footer.style.display = "none";
-      } catch (error) {
-        console.error(error);
-        alert("An error occurred while submitting the form.");
-      }
+        try {
+            await axios.post(
+            "https://us-central1-ref-buddy-d7be3.cloudfunctions.net/sendContactForm",
+            { data: this.form }
+            );
+            this.success = true;
+            this.$refs.footerForm.style.display = "none";
+            this.$refs.footer.style.display = "none";
+        } catch (error) {
+            console.error(error);
+            alert("An error occurred while submitting the form.");
+        }
     },
   },
 };
@@ -136,7 +136,6 @@ export default {
         background-color: #dff0d8;
         color: #000000;
         border: 1px solid #000000;
-        border-radius: 5px;
         padding: 20px;
         margin-top: 20px;
     }
