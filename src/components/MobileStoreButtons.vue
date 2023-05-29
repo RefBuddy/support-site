@@ -9,15 +9,6 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'MobileStores',
-  mounted() {
-    console.log('MobileStores component mounted.');
-  },
-};
-</script>
-
 <style>
 .store-buttons {
   display: flex;
