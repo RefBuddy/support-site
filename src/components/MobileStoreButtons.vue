@@ -28,7 +28,7 @@
 
 @media (max-width: 768px) {
   .store-buttons img {
-    height: 50px; /* Add this line to make the badges smaller on mobile devices */
+    height: 40px; 
   }
 }
 </style>
