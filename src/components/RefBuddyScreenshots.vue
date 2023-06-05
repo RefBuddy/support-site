@@ -9,19 +9,19 @@
             </button>
             <div class="screenshots__items" ref="screenshotsItems">
                 <img
-                    v-if="currentImage === 0"
+                    v-show="currentImage === 0"
                     class="screenshot__item"
                     src="@/assets/Stats.png"
                     alt="Stats"
                 />
                 <img
-                    v-if="currentImage === 1"
+                    v-show="currentImage === 1"
                     class="screenshot__item"
                     src="@/assets/Assignor.png"
                     alt="Assignor"
                 />
                 <img
-                    v-if="currentImage === 2"
+                    v-show="currentImage === 2"
                     class="screenshot__item"
                     src="@/assets/Game.png"
                     alt="Game"
