@@ -3,13 +3,11 @@
         <section class="introduction">
             <h2 class="component_title">Introduction</h2>
             <p v-if="formattedIntroductionText" v-html="formattedIntroductionText"></p>
-            <p v-else>{{ introductionText }}</p>
         </section>
         
         <section class="introduction">
             <h2 class="component_title">For Officials</h2>
             <p v-if="formattedOfficialsText" v-html="formattedOfficialsText"></p>
-            <p v-else>{{ officialsText }}</p>
         </section>
         
         <section class="introduction">
