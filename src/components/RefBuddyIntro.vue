@@ -19,11 +19,6 @@
       <h2 class="component_title">Performance Tracking</h2>
       <p v-if="formattedText(performanceTrackingText)" v-html="formattedText(performanceTrackingText)"></p>
     </section>
-
-    <section class="introduction">
-      <h2 class="component_title">Join the Revolution</h2>
-      <p v-if="formattedText(joinText)" v-html="formattedText(joinText)"></p>
-    </section>
   </div>
 </template>
 
@@ -45,18 +40,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-section {
-  margin-bottom: 2em;
-}
-
-h1,
-h2 {
-  color: #333;
-}
-
-p {
-  color: #666;
-}
-</style>
