@@ -41,6 +41,17 @@ body {
     margin-right: 15px;
 }
 
+.component_title {
+  color: black;
+  width: auto;
+  margin: 0 auto;
+  text-align: left;
+  font-family: "VT323", monospace;
+  border-bottom: 1px solid rgba(255, 159, 33, 0.73);
+  border-right: 100px solid white;
+  padding-bottom: 10px;
+}
+
 @media screen and (max-height: 760px) {
     .main {
         height: 75%;

@@ -1,6 +1,6 @@
 <template>
     <section class="features">
-        <h2 class="features__title">Features</h2>
+        <h2 class="component_title">Features</h2>
         <ul class="features__list">
             <li>Automatically imported league schedule</li>
             <li>Assign referees and linesmen to games</li>
