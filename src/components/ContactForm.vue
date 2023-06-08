@@ -139,7 +139,9 @@ export default {
         background-color: #dff0d8;
         color: #000000;
         border: 1px solid #000000;
+        font-family: "VT323", monospace;
         padding: 20px;
+        font-size: large;
         margin-top: 20px;
     }
 </style>
