@@ -1,8 +1,7 @@
 <template>
   <div id="app">
-    <section class="introduction">
-      <h2 class="component_title">Introduction</h2>
-      <p v-if="formattedText(introductionText)" v-html="formattedText(introductionText)"></p>
+    <section class="introduction" style="padding-top: 0px;">
+        <p v-if="formattedText(introductionText)" v-html="formattedText(introductionText)"></p>
     </section>
 
     <section class="introduction">
