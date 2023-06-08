@@ -14,6 +14,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 8px;
 }
 
 .store-buttons a {
