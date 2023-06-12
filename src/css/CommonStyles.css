@@ -98,7 +98,7 @@ screen and (max-height: 595px) {
     padding: 10px;
     margin: 0 10px;
     height: 100%;
-    width: calc(100% - 30px); /* Change this value to make the highlighted code wider */
+    width: calc(100% - 10px); /* Change this value to make the highlighted code wider */
     top: 0;
     left: 0;
     transform: none;
@@ -111,7 +111,7 @@ screen and (max-height: 595px) {
   }
 
   .header {
-    margin: 0 10px 10px 0;
+    margin: 5px 15px 5px 0;
   }
 }
 
