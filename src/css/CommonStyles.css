@@ -111,8 +111,7 @@ screen and (max-height: 595px) {
   }
 
   .header {
-  margin: 0 0 5px 15px; /* Change this value to make the header shorter on the left and longer on the right */
-  padding-bottom: 10px; /* Change this value to add empty space on the bottom */
+  margin: -5px 0 5px 15px; /* Change this value to make the header shorter on the left and longer on the right */
 }
 }
 
