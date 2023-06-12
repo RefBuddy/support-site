@@ -95,7 +95,7 @@ screen and (max-height: 595px) {
     background-color: transparent;
     border: none;
     box-shadow: none;
-    padding: 10px 33px 0 30px;
+    padding: 10px;
     margin: 0 10px;
     height: 100%;
     width: calc(100% - 10px);
