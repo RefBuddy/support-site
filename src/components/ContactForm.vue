@@ -1,7 +1,7 @@
 <template>
   <footer ref="footer" class="footer">
-    <h2 class="component_title">Join the Revolution</h2>
-      <p v-if="formattedText(joinText)" v-html="formattedText(joinText)"></p>
+    <h2 class="component_title">Join Ref Buddy</h2>
+      <p v-html=joinText></p>
     <form ref="footerForm" class="footer__form">
       <div class="form-group">
         <div class="input-wrapper">
@@ -49,7 +49,7 @@ export default {
       },
       errors: {},
       success: false,
-      joinText: "Get ready to streamline your scheduling, enhance performance tracking, and revolutionize the way you manage hockey officiating. \nJoin the Ref Buddy revolution today—the ultimate mobile solution for elite hockey leagues."
+      joinText: "Fill out the following form to find out how your league can start using Ref Buddy—the ultimate mobile solution for elite hockey leagues."
     };
   },
   methods: {
@@ -94,9 +94,6 @@ export default {
             alert("An error occurred while submitting the form.");
         }
     },
-    formattedText(text) {
-      return text.replace(/\n/g, "<br><br>");
-    }
   },
 };
 </script>

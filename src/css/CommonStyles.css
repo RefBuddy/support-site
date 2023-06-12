@@ -4,39 +4,44 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
+:root {
+  --primary-color: rgba(255, 145, 0, 0.73);
+  --secondary-color: #636363;
+  --primary-font: "Montserrat", sans-serif;
+}
+
 body {
-  font-family: "Montserrat", sans-serif;
-  background-color: rgba(255, 145, 0, 0.73);
+  font-family: var(--primary-font);
+  background-color: var(--primary-color);
   font-size: 18px;
 }
 
 .ref-buddy-page {
-  width: auto;
-  max-width: 550px;
-  min-width: 300px;
-  height: 92%;
-  min-height: 450px;
-  margin: 0 auto;
-  padding: 20px 50px 0 50px;
-  background-color: white;
-  border-radius: 0;
-  border: 3px solid black;
   position: absolute;
   top: calc(50% - 10px);
   left: 50%;
   transform: translate(-50%, -50%);
+  width: auto;
+  max-width: 750px;
+  min-width: 300px;
+  height: 92%;
+  min-height: 450px;
+  margin: 0 auto;
+  padding: 20px 23px 0 20px;
+  background-color: white;
+  border-radius: 0;
+  border: 3px solid black;
   box-shadow: 15px 15px 0px 0px black;
 }
 
 .main {
   flex: 1;
-  padding: 16px;
   width: auto;
-  max-width: 550px;
+  max-width: 750px;
   height: 78%;
+  padding: 16px;
   overflow-y: scroll;
-  margin-left: 10px;
-  margin-right: 15px;
+  margin: 10px 0 0 10px;
 }
 
 .component_title {
@@ -54,33 +59,34 @@ section {
   margin-bottom: 2em;
 }
 
-h1,
-h2 {
+h1, h2 {
   color: #000;
 }
 
 p {
-  color: #636363;
+  color: var(--secondary-color);
 }
 
-@media screen and (max-height: 760px) {
+@media screen and (max-height: 760px), 
+screen and (max-height: 660px), 
+screen and (max-height: 595px) {
   .main {
     height: 75%;
   }
-}
 
-@media screen and (max-height: 660px) {
-  .ref-buddy-page {
-    height: 85%;
+  @media (max-height: 660px) {
+    .ref-buddy-page {
+      height: 85%;
+    }
+    .main {
+      height: 70%;
+    }
   }
-  .main {
-    height: 70%;
-  }
-}
 
-@media screen and (max-height: 595px) {
-  .main {
-    height: 65%;
+  @media (max-height: 595px) {
+    .main {
+      height: 65%;
+    }
   }
 }
 
@@ -92,17 +98,21 @@ p {
     padding: 10px;
     margin: 0 10px;
     height: 100%;
-    width: calc(100% - 20px);
+    width: calc(100% - 10px);
     top: 0;
     left: 0;
     transform: none;
+    margin-left: -10px;
   }
+
   .main {
     height: 80%;
-    margin-top: -15px;
+    /* margin-top: -15px; */
   }
+
   .header {
-    margin: 0 15px 15px 0;
+    margin: 0 0 5px 5px; /* Change this value to make the header shorter on the left and longer on the right */
+    padding-bottom: 10px; /* Change this value to add empty space on the bottom */
   }
 }
 
